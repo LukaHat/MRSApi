@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Studentska_razmjena_API.props" />
+</Project>
