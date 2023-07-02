@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Studentska_razmjena_API.Data;
+using Studentska_razmjena_API.Dto;
 using Studentska_razmjena_API.Interfaces;
 using Studentska_razmjena_API.Models;
+using System.Diagnostics.Metrics;
 
 namespace Studentska_razmjena_API.Controllers
 {
@@ -19,7 +22,7 @@ namespace Studentska_razmjena_API.Controllers
         public IActionResult DohvatiStudente()
         {
             var studenti = _studentRepository.DohvatiStudente();
-            if(!ModelState.IsValid) 
+            if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             return Ok(studenti);
@@ -39,6 +42,29 @@ namespace Studentska_razmjena_API.Controllers
                 return BadRequest(ModelState);
 
             return Ok(student);
+        }
+
+        [HttpPost]
+        [ProducesResponseType(201, Type = typeof(Student))]
+        [ProducesResponseType(400)]
+        public IActionResult StvoriStudenta([FromBody] Student student)
+        {
+            if (student == null)
+                return BadRequest();
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var uspjeh = _studentRepository.StvoriStudenta(student);
+
+            if (uspjeh)
+            {
+                return CreatedAtAction(nameof(DohvatiStudente), new { StudentId = student.Id }, student);
+            }
+            else
+            {
+                return BadRequest("Failed to create student.");
+            }
         }
     }
 }

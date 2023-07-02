@@ -25,5 +25,16 @@ namespace Studentska_razmjena_API.Repository
         {
             return _context.Razmjene.Where(e => e.Id == id).FirstOrDefault();
         }
+
+        public bool StvoriRamjenu(int StudentId, Razmjena razmjena)
+        {
+            _context.Add(razmjena);
+            return Spremi();
+        }
+
+        public bool Spremi()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

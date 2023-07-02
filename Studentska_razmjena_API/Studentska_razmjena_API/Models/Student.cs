@@ -7,9 +7,5 @@
         public string? Prezime { get; set; }
         public string? JMBAG { get; set; }
         public ICollection<Razmjena>? Razmjene { get; set; }
-        public Student()
-        {
-            Razmjene = new List<Razmjena>(); // Initialize the property with an empty list
-        }
     }
 }

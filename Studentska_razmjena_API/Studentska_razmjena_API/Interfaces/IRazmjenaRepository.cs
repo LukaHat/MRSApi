@@ -8,5 +8,7 @@ namespace Studentska_razmjena_API.Interfaces
         Razmjena DohvatiRazmjenu(int id);
         
         bool RazmjenaPostoji(int id);
+        bool StvoriRamjenu(int StudentId, Razmjena razmjena);
+        bool Spremi();
     }
 }

@@ -9,6 +9,7 @@ namespace Studentska_razmjena_API.Helper
         public MappingProfiles() 
         {
             CreateMap<Student, StudentDto>();
+            CreateMap<Razmjena,RazmjenaDto>();
         }
     }
 }

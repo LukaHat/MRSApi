@@ -27,7 +27,7 @@ namespace Studentska_razmjena_API.Controllers
         [HttpGet("{razmjenaId}")]
         [ProducesResponseType(200, Type = typeof(Razmjena))]
         [ProducesResponseType(400)]
-        public IActionResult DohvatiStudente(int razmjenaId)
+        public IActionResult DohvatiRazmjene(int razmjenaId)
         {
             if (!_razmjenaRepository.RazmjenaPostoji(razmjenaId))
                 return NotFound();

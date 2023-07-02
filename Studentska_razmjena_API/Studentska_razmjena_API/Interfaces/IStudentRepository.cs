@@ -8,5 +8,7 @@ namespace Studentska_razmjena_API.Interfaces
         Student DohvatiStudente(int id);
         Student DohvatiStudente(string Ime);
         bool StudentPostoji(int StudentId);
+        bool StvoriStudenta(Student student);
+        bool Spremi();
     }
 }
