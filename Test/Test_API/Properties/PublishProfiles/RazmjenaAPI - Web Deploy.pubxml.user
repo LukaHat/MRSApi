@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAr03Zo9phJECVPo2vexIiIgAAAAACAAAAAAAQZgAAAAEAACAAAABnSbmk5a60J+TpeoVMrDwAkn2N3re4q1sZK8omPAJOBwAAAAAOgAAAAAIAACAAAACKgSgWkUrUrANv8c7Teb72RQKuiP+fn+daXoukYP3D04AAAABmT8HyFLtlarK207VXb0TZH0HLWBg4+iYCj2U9EswYHVm/jkDRjNHnKf7ApsxQkTeN8iSxFYpUGNW5sWxHUWZRpglCoQ04W+lZVZZdeF7i1+ln+qkZJ1xcMKB5L7cIRnD2e2E9aRngAEDCXCYfud6hlgeWHLGZNACdNi61gHhNSkAAAAA5H2HLslfaPZQHHPeTMNatB8fqmeI7zvJsNjSCPdfB2lYoWu65oYDEPPJOcKRyGThzAWO6MKVUELPh28TtR7Qu</EncryptedPassword>
+    <History>True|2023-07-28T08:50:48.8378230Z;True|2023-07-28T10:44:22.3579694+02:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultSQLConnection">
+      <Value>Server=tcp:razmjena-server.database.windows.net,1433%3bInitial Catalog=razmjenaAPI_baza_podataka%3bPersist Security Info=False%3bUser ID=adminuser%3bPassword=admin123%2a%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

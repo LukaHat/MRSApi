@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Razmjena_API.props" />
+</Project>
