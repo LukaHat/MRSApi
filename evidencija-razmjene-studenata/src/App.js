@@ -1,27 +1,28 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import StudentList from "./StudentList";
+import { Route, Routes } from "react-router-dom";
+import { Home } from "./Home";
+import { Students } from "./Students";
+import { Razmjene } from "./Razmjene";
+import { ErrorPage } from "./ErrorPage";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
 
-export default function App() {
+//styles
+import "./dist/css/styles.min.css";
+
+const App = () => {
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <Routes>
-          <Route
-            path="/https://razmjenaapi.azurewebsites.net/api/StudentAPI"
-            exact
-            component={StudentList}
-          />
-        </Routes>
-      </div>
-    </Router>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/studenti" element={<Students />} />
+        <Route path="/razmjene" element={<Razmjene />} />
+        <Route path="*" element={<ErrorPage />}></Route>
+      </Routes>
+      <Footer />
+    </>
   );
-}
+};
+
+export default App;
