@@ -1,0 +1,28 @@
+@import "./mixins"
+@import "./variables"
+.student-list
+    @include displayFlex
+    flex-direction: column
+    .student
+        height: 7vh
+        width: 45vw
+        padding: 0.5rem       
+        background-color: $grey
+        font-size: 20px
+        @include displayFlex
+        color: $white
+        margin:  0.5rem auto
+        border-radius: 20px
+        border: 5px solid black
+        gap: 10px 
+        font-family: $main-font
+        h3
+            width: 33%
+    .edit-create-buttons
+        @include displayFlex
+        gap: 2rem
+button
+    @include studentButton
+        
+    
+    

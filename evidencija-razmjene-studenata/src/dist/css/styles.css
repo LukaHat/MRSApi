@@ -129,11 +129,6 @@ table {
   border-spacing: 0;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-}
-
 .header-nav {
   display: flex;
   align-items: center;
@@ -143,7 +138,7 @@ a {
   width: 100vw;
   height: 7.5vh;
   background-color: #1ecbe1;
-  color: #fff;
+  color: #Fff;
   font-family: "Roboto", sans-serif;
   margin: 0 auto;
 }
@@ -151,6 +146,7 @@ a {
   font-weight: 700;
   font-size: 2rem;
   padding: 0 2rem;
+  color: #Fff;
 }
 .header-nav h1:hover {
   color: rgba(255, 255, 255, 0.6);
@@ -296,26 +292,159 @@ table {
   border-spacing: 0;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-}
-
 main {
-  width: 100%;
+  position: relative;
+  width: 80%;
+  border-radius: 15px;
   height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 5rem auto;
   flex-direction: column;
-  background-color: #fff;
+  background-color: #Fff;
 }
-main h1 {
-  font-size: 6rem;
+main p {
+  min-width: 200px;
+  min-height: 300px;
+  font-size: 2rem;
+  color: #3D7068;
+  text-align: center;
+  font-weight: bold;
+}
+main .main-link-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+main .main-link-buttons button {
+  width: 35vw;
+  height: 15vh;
+  font-size: 1.8rem;
+  color: #Fff;
+  background-color: #3D7068;
+  border-radius: 10px;
+  cursor: pointer;
+}
+main .main-link-buttons button:hover {
+  scale: 1.1;
+  transition: 500ms;
+}
+main .main-link-buttons button a {
+  height: 100%;
+}
+
+footer {
+  background-color: #1ecbe1;
+  color: #Fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5vh;
+  font-size: 15px;
+}
+footer small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20%;
+  height: 100%;
+}
+footer small a {
+  color: #Fff;
+  cursor: pointer;
+}
+footer small a:hover {
+  color: #696D7D;
+}
+
+.student-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.student-list .student {
+  height: 7vh;
+  width: 45vw;
+  padding: 0.5rem;
+  background-color: #696D7D;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #Fff;
+  margin: 0.5rem auto;
+  border-radius: 20px;
+  border: 5px solid black;
+  gap: 10px;
+  font-family: "Roboto", sans-serif;
+}
+.student-list .student h3 {
+  width: 33%;
+}
+.student-list .edit-create-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+button {
+  background-color: #001011;
+  height: 3rem;
+  color: #Fff;
+  width: 5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+form {
+  display: flex;
+  width: 20vw;
+  margin-left: 40vw;
+  flex-direction: column;
+  gap: 2rem;
+}
+form div {
+  width: 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+form label {
+  font-size: 25px;
+  color: #3D7068;
+}
+form input {
+  border: 0.2rem solid #3D7068;
+  height: 2.5rem;
+  margin: 0 0.5rem;
+  border-radius: 1rem;
+}
+form button {
+  height: 2.5rem;
+  border: 0.2rem solid #3D7068;
+  border-radius: 1rem;
+  color: #3D7068;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fff5ee;
+}
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+body h1 {
+  font-size: 4rem;
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  color: #e1341e;
-  padding-bottom: 10rem;
+  color: #3D7068;
+  padding: 4rem 0;
 }

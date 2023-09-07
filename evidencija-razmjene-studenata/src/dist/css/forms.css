@@ -1,0 +1,29 @@
+form {
+  display: flex;
+  width: 20vw;
+  margin-left: 40vw;
+  flex-direction: column;
+  gap: 2rem;
+}
+form div {
+  width: 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+form label {
+  font-size: 25px;
+  color: #3D7068;
+}
+form input {
+  border: 0.2rem solid #3D7068;
+  height: 2.5rem;
+  margin: 0 0.5rem;
+  border-radius: 1rem;
+}
+form button {
+  height: 2.5rem;
+  border: 0.2rem solid #3D7068;
+  border-radius: 1rem;
+  color: #3D7068;
+}

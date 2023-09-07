@@ -2,4 +2,16 @@
 @import "./mixins"
 @import "./header"
 @import "./reset"
-@import './main'
+@import "./main"
+@import "./footer"
+@import "./student"
+@import "./forms"
+
+body
+    font-family: $main-font
+    background-color: $off-white
+    a
+        text-decoration: none
+        color: inherit
+    h1
+        @include heading

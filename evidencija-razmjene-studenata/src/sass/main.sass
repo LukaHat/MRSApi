@@ -2,17 +2,36 @@
 @import './mixins'
 
 main
-    width: 100%
+    position: relative
+    width: 80%
+    border-radius: 15px
     height: 70vh
     @include displayFlex
     margin: 5rem auto
     flex-direction: column
     background-color: $white
-    h1
-        font-size: 6rem
+    p
+        min-width: 200px
+        min-height: 300px
+        font-size: 2rem
+        color: $green
         text-align: center
-        font-family: $main-font
-        font-weight: 700
-        color: $secondary-color
-        padding-bottom: 10rem
-    
+        font-weight: bold
+    .main-link-buttons
+        @include displayFlex
+        gap: 4rem
+        button
+            width: 35vw
+            height: 15vh
+            font-size: 1.8rem
+            color: $white
+            background-color: $green
+            border-radius: 10px
+            cursor: pointer
+            &:hover
+                scale: 1.1
+                transition: 500ms
+            a
+                height: 100%        
+                   
+            
