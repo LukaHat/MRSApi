@@ -5,7 +5,6 @@ import { Students } from "./Students";
 import { Razmjene } from "./Razmjene";
 import { ErrorPage } from "./ErrorPage";
 import { Header } from "./Header";
-import { Footer } from "./Footer";
 import { DeleteRazmjenaForm } from "./DeleteRazmjenaForm";
 import { DeleteStudentForm } from "./DeleteStudentForm";
 import { EditStudentForm } from "./EditStudentForm";
@@ -31,7 +30,6 @@ const App = () => {
         <Route path="/delete/razmjena" element={<DeleteRazmjenaForm />} />
         <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
-      <Footer />
     </>
   );
 };

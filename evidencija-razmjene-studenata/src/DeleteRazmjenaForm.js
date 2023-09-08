@@ -38,30 +38,30 @@ export const DeleteRazmjenaForm = () => {
   };
   return (
     <>
-      <h1>Unesite ID razmjene koju želite izbrisati</h1>
-      <form onSubmit={(e) => e.preventDefault()}>
-        <div>
-          <label htmlFor="razmjena_id">ID:</label>
-          <input
-            type="number"
-            name="razmjena_id"
-            id="razmjena_id"
-            placeholder="ID razmjene"
-            value={id}
-            onChange={handleInput}
-          />
-          <button type="button" onClick={handleDelete}>
-            Izbriši
-          </button>
+      <main>
+        <h1>Unesite ID razmjene koju želite izbrisati</h1>
+        <form onSubmit={(e) => e.preventDefault()}>
           <div>
-            <Link to="/razmjene">
-              <button onClick={fetchRazmjene}>
-                Povratak na popis Razmjena
-              </button>
-            </Link>
+            <label htmlFor="razmjena_id">ID:</label>
+            <input
+              type="number"
+              name="razmjena_id"
+              id="razmjena_id"
+              placeholder="ID razmjene"
+              value={id}
+              onChange={handleInput}
+            />
+            <button type="button" onClick={handleDelete}>
+              Izbriši
+            </button>
+            <div>
+              <Link to="/razmjene">
+                <button onClick={fetchRazmjene}>Popis Razmjena</button>
+              </Link>
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </main>
     </>
   );
 };

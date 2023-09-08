@@ -4,25 +4,38 @@
     @include displayFlex
     flex-direction: column
     .student
-        height: 7vh
-        width: 45vw
-        padding: 0.5rem       
+        height: 2em
+        width: 35vw     
         background-color: $grey
         font-size: 20px
         @include displayFlex
+        justify-content: space-around
         color: $white
         margin:  0.5rem auto
         border-radius: 20px
         border: 5px solid black
         gap: 10px 
         font-family: $main-font
+        &:nth-of-type(1)
+            background-color: black
         h3
-            width: 33%
+            width: 25%
+            text-align: center
+    .row-titles
+        @include displayFlex
+        justify-content: space-around
+        span
+            width: 25%
+            text-align: center
     .edit-create-buttons
         @include displayFlex
         gap: 2rem
 button
     @include studentButton
+    background-color: $grey
+    &:hover
+        scale: 1.1
+        transition: 400ms
         
     
     

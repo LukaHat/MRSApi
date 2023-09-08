@@ -1,28 +1,22 @@
 @import './mixins'
 @import './variables'
 
+h1
+    margin-top: 2rem
+    margin-bottom: 1rem
 form
-    display: flex
-    width: 20vw
-    margin-left: 40vw
+    @include displayFlex
     flex-direction: column
-    gap: 2rem
+    font-size: 20px
+    gap: 10px
+    width: 30%
     div
-        width: 15vw
-        display: flex
-        align-items: center
-        justify-content: space-between       
-    label
-        font-size: 25px
-        color: $green
-    input
-        border: 0.2rem solid $green
-        height: 2.5rem
-        margin:0 0.5rem
-        border-radius: 1rem
-    button
-        height: 2.5rem
-        border: 0.2rem solid $green 
-        border-radius: 1rem
-        color: $green   
+        width: 100%
+        gap: 15px
+        @include displayFlex
+        input
+            height: 30px
+            border-radius: 20px solid $green
+
+        
         

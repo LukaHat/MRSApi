@@ -1,0 +1,19 @@
+@import "./variables"
+@import "./mixins"
+
+
+.razmjena
+    font-size: 20px
+    @include displayFlex
+    flex-direction: column
+    background-color: $grey
+    border: 5px solid white
+    color: $off-white
+    padding: 0.5rem
+    border-radius: 20px
+    h3
+        @include displayFlex
+        align-self: flex-start
+        border-top: 2px solid black
+button
+    margin-left: 2rem

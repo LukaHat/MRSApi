@@ -5,14 +5,14 @@
   flex-direction: column;
 }
 .student-list .student {
-  height: 7vh;
-  width: 45vw;
-  padding: 0.5rem;
+  height: 2em;
+  width: 35vw;
   background-color: #696D7D;
   font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: space-around;
   color: #Fff;
   margin: 0.5rem auto;
   border-radius: 20px;
@@ -20,8 +20,22 @@
   gap: 10px;
   font-family: "Roboto", sans-serif;
 }
+.student-list .student:nth-of-type(1) {
+  background-color: black;
+}
 .student-list .student h3 {
-  width: 33%;
+  width: 25%;
+  text-align: center;
+}
+.student-list .row-titles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+.student-list .row-titles span {
+  width: 25%;
+  text-align: center;
 }
 .student-list .edit-create-buttons {
   display: flex;
@@ -38,4 +52,9 @@ button {
   border-radius: 10px;
   cursor: pointer;
   font-size: 15px;
+  background-color: #696D7D;
+}
+button:hover {
+  scale: 1.1;
+  transition: 400ms;
 }

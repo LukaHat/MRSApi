@@ -142,23 +142,41 @@ table {
   font-family: "Roboto", sans-serif;
   margin: 0 auto;
 }
-.header-nav h1 {
+.header-nav h2 {
   font-weight: 700;
   font-size: 2rem;
   padding: 0 2rem;
   color: #Fff;
 }
-.header-nav h1:hover {
+.header-nav h2:hover {
   color: rgba(255, 255, 255, 0.6);
   transition: 400ms;
 }
 .header-nav a {
   font-size: 1.2rem;
-  padding: 0 2rem;
+  margin: 0 2rem;
 }
 .header-nav a:hover {
   color: rgba(255, 255, 255, 0.6);
   transition: 400ms;
+}
+.header-nav .main-nav {
+  height: 7.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-nav .main-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+.header-nav .main-nav a:hover {
+  background-color: rgb(12, 107, 119);
+  color: #Fff;
+  transition: 700ms;
 }
 
 html,
@@ -293,14 +311,13 @@ table {
 }
 
 main {
-  position: relative;
+  height: 90vh;
   width: 80%;
   border-radius: 15px;
-  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5rem auto;
+  margin: 0 auto;
   flex-direction: column;
   background-color: #Fff;
 }
@@ -338,10 +355,11 @@ main .main-link-buttons button a {
 footer {
   background-color: #1ecbe1;
   color: #Fff;
+  width: 100%;
   position: absolute;
   bottom: 0;
-  width: 100%;
-  height: 5vh;
+  left: 0;
+  height: 50px;
   font-size: 15px;
 }
 footer small {
@@ -367,14 +385,14 @@ footer small a:hover {
   flex-direction: column;
 }
 .student-list .student {
-  height: 7vh;
-  width: 45vw;
-  padding: 0.5rem;
+  height: 2em;
+  width: 35vw;
   background-color: #696D7D;
   font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: space-around;
   color: #Fff;
   margin: 0.5rem auto;
   border-radius: 20px;
@@ -382,8 +400,22 @@ footer small a:hover {
   gap: 10px;
   font-family: "Roboto", sans-serif;
 }
+.student-list .student:nth-of-type(1) {
+  background-color: black;
+}
 .student-list .student h3 {
-  width: 33%;
+  width: 25%;
+  text-align: center;
+}
+.student-list .row-titles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+.student-list .row-titles span {
+  width: 25%;
+  text-align: center;
 }
 .student-list .edit-create-buttons {
   display: flex;
@@ -400,36 +432,61 @@ button {
   border-radius: 10px;
   cursor: pointer;
   font-size: 15px;
+  background-color: #696D7D;
+}
+button:hover {
+  scale: 1.1;
+  transition: 400ms;
+}
+
+h1 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 form {
   display: flex;
-  width: 20vw;
-  margin-left: 40vw;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  gap: 2rem;
+  font-size: 20px;
+  gap: 10px;
+  width: 30%;
 }
 form div {
-  width: 15vw;
+  width: 100%;
+  gap: 15px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
-form label {
-  font-size: 25px;
-  color: #3D7068;
+form div input {
+  height: 30px;
+  border-radius: 20px solid #3D7068;
 }
-form input {
-  border: 0.2rem solid #3D7068;
-  height: 2.5rem;
-  margin: 0 0.5rem;
-  border-radius: 1rem;
+
+.razmjena {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #696D7D;
+  border: 5px solid white;
+  color: #fff5ee;
+  padding: 0.5rem;
+  border-radius: 20px;
 }
-form button {
-  height: 2.5rem;
-  border: 0.2rem solid #3D7068;
-  border-radius: 1rem;
-  color: #3D7068;
+.razmjena h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  border-top: 2px solid black;
+}
+
+button {
+  margin-left: 2rem;
 }
 
 body {
@@ -441,10 +498,10 @@ body a {
   color: inherit;
 }
 body h1 {
-  font-size: 4rem;
+  font-size: 3rem;
+  margin-top: 5rem;
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   color: #3D7068;
-  padding: 4rem 0;
 }

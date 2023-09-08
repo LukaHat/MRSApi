@@ -38,26 +38,28 @@ export const DeleteStudentForm = () => {
 
   return (
     <>
-      <h1>Unesite ID studenta kojeg želite izbrisati</h1>
-      <form onSubmit={(e) => e.preventDefault()}>
-        <div>
-          <label htmlFor="student_id">ID:</label>
-          <input
-            type="number"
-            name="student_id"
-            id="student_id"
-            placeholder="ID Studenta"
-            value={id}
-            onChange={handleInput}
-          />
-          <button type="button" onClick={handleDelete}>
-            Izbriši
-          </button>
-        </div>
-        <Link to="/studenti">
-          <button onClick={fetchStudents}>Povratak na popis studenata</button>
-        </Link>
-      </form>
+      <main>
+        <h1>Unesite ID studenta kojeg želite izbrisati</h1>
+        <form onSubmit={(e) => e.preventDefault()}>
+          <div>
+            <label htmlFor="student_id">ID:</label>
+            <input
+              type="number"
+              name="student_id"
+              id="student_id"
+              placeholder="ID Studenta"
+              value={id}
+              onChange={handleInput}
+            />
+            <button type="button" onClick={handleDelete}>
+              Izbriši
+            </button>
+          </div>
+          <Link to="/studenti">
+            <button onClick={fetchStudents}>Popis studenata</button>
+          </Link>
+        </form>
+      </main>
     </>
   );
 };

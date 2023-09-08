@@ -1,10 +1,11 @@
 footer {
   background-color: #1ecbe1;
   color: #Fff;
+  width: 100%;
   position: absolute;
   bottom: 0;
-  width: 100%;
-  height: 5vh;
+  left: 0;
+  height: 50px;
   font-size: 15px;
 }
 footer small {

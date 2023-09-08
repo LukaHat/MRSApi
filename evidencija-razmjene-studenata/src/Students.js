@@ -21,31 +21,39 @@ export const Students = () => {
   }, []);
   return (
     <>
-      <h1>Studenti na razmjeni</h1>
-      <ul className="student-list">
-        {students.map((student) => {
-          const { id, ime, prezime, jmbag } = student;
-          return (
-            <li key={id} className="student">
-              <h3>Id: {id}</h3>
-              <h3>Ime: {ime}</h3>
-              <h3>Prezime: {prezime}</h3>
-              <h3>JMBAG: {jmbag}</h3>
-            </li>
-          );
-        })}
-        <li className="edit-create-buttons">
-          <Link to="/create/student">
-            <button>Create</button>
-          </Link>
-          <Link to="/delete/student">
-            <button>Delete</button>
-          </Link>
-          <Link to={"/edit/student"}>
-            <button>Edit</button>
-          </Link>
-        </li>
-      </ul>
+      <main>
+        <h1>Studenti na razmjeni</h1>
+        <ul className="student-list">
+          <li className="student row-titles">
+            <span>Id</span>
+            <span>Ime</span>
+            <span>Prezime</span>
+            <span>JMBAG</span>
+          </li>
+          {students.map((student) => {
+            const { id, ime, prezime, jmbag } = student;
+            return (
+              <li key={id} className="student">
+                <h3>{id}</h3>
+                <h3>{ime}</h3>
+                <h3>{prezime}</h3>
+                <h3>{jmbag}</h3>
+              </li>
+            );
+          })}
+          <li className="edit-create-buttons">
+            <Link to="/create/student">
+              <button>Dodaj</button>
+            </Link>
+            <Link to="/delete/student">
+              <button>Obriši</button>
+            </Link>
+            <Link to={"/edit/student"}>
+              <button>Uredi</button>
+            </Link>
+          </li>
+        </ul>
+      </main>
     </>
   );
 };

@@ -1,12 +1,11 @@
 main {
-  position: relative;
+  height: 90vh;
   width: 80%;
   border-radius: 15px;
-  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5rem auto;
+  margin: 0 auto;
   flex-direction: column;
   background-color: #Fff;
 }
