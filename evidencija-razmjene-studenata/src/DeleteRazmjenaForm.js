@@ -54,12 +54,10 @@ export const DeleteRazmjenaForm = () => {
             <button type="button" onClick={handleDelete}>
               Izbriši
             </button>
-            <div>
-              <Link to="/razmjene">
-                <button onClick={fetchRazmjene}>Popis Razmjena</button>
-              </Link>
-            </div>
           </div>
+          <Link to="/razmjene">
+            <button onClick={fetchRazmjene}>Popis Razmjena</button>
+          </Link>
         </form>
       </main>
     </>

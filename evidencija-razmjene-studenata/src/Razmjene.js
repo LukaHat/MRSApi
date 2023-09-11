@@ -5,15 +5,32 @@ import axios from "axios";
 
 const getRazmjeneUrl = "https://razmjenaapi.azurewebsites.net/api/RazmjenaAPI";
 
+function formatDateToDMY(dateString) {
+  const date = new Date(dateString);
+  const day = date.getDate();
+  const month = date.getMonth() + 1; // Months are 0-based
+  const year = date.getFullYear();
+
+  // Add leading zeros if needed
+  const formattedDay = day < 10 ? `0${day}` : day;
+  const formattedMonth = month < 10 ? `0${month}` : month;
+
+  return `${formattedDay}-${formattedMonth}-${year}`;
+}
+
 export const Razmjene = () => {
-  const [razmjene, SetRazmjene] = useState([]);
+  const [razmjene, setRazmjene] = useState([]);
   const fetchRazmjene = async () => {
     try {
-      const response2 = await axios(getRazmjeneUrl);
-      const razmjenaData = response2.data.result;
-      SetRazmjene(razmjenaData);
+      const response = await axios.get(getRazmjeneUrl);
+      const razmjenaData = response.data.result.map((razmjena) => ({
+        ...razmjena,
+        datumOd: formatDateToDMY(razmjena.datumOd),
+        datumDo: formatDateToDMY(razmjena.datumDo),
+      }));
+      setRazmjene(razmjenaData);
     } catch (error) {
-      console.log(error.response2);
+      console.log(error);
     }
   };
   useEffect(() => {

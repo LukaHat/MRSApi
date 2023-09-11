@@ -155,6 +155,7 @@ table {
 .header-nav a {
   font-size: 1.2rem;
   margin: 0 2rem;
+  padding: 0 0.5rem;
 }
 .header-nav a:hover {
   color: rgba(255, 255, 255, 0.6);
