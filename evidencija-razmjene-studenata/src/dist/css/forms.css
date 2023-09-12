@@ -1,25 +1,48 @@
-h1 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+.list h1 {
+  margin: 2rem auto;
+  font-size: 25px;
+  font-weight: bold;
 }
-
-form {
+.list form {
+  width: 100%;
+}
+.list form .input {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1rem;
   flex-direction: column;
   font-size: 20px;
-  gap: 10px;
-  width: 30%;
 }
-form div {
-  width: 100%;
-  gap: 15px;
+.list form .input label {
+  width: 50%;
+}
+.list form .input input {
+  width: 50%;
+}
+
+.form-buttons {
+  margin: 2rem auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 }
-form div input {
-  height: 30px;
-  border-radius: 20px solid #3D7068;
+.form-buttons button {
+  padding: 1rem;
+  font-size: 15px;
+  background-color: transparent;
+  color: #Fff;
+  border: 2px solid #Fff;
+  box-shadow: 5px 5px 4px 2px rgba(255, 255, 255, 0.4);
+}
+.form-buttons button:hover {
+  cursor: pointer;
+  color: #1ecbe1;
+  border: 2px solid #1ecbe1;
+  background-color: #Fff;
+  box-shadow: 5px 5px 4px 2px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.1rem;
+  scale: 1.1;
+  transition: 500ms;
 }

@@ -39,9 +39,9 @@ export const Razmjene = () => {
   return (
     <>
       <main>
-        <h1>Popis razmjena</h1>
-        <ul className=" student-list">
-          <li className="student row-titles">
+        <ul className="list">
+          <h1 className="sub-title">Popis razmjena</h1>
+          <li className="row-titles">
             <span>ID</span>
             <span>ID studenta</span>
             <span>Država</span>
@@ -53,7 +53,7 @@ export const Razmjene = () => {
             const { id, studentId, drzava, sveuciliste, datumOd, datumDo } =
               razmjena;
             return (
-              <li key={id} className="student">
+              <li key={id} className="rows">
                 <h3>{id}</h3>
                 <h3>{studentId}</h3>
                 <h3>{drzava}</h3>
@@ -63,7 +63,7 @@ export const Razmjene = () => {
               </li>
             );
           })}
-          <li className="edit-create-buttons">
+          <li className="crud-buttons">
             <Link to="/create/razmjena">
               <button>Create</button>
             </Link>

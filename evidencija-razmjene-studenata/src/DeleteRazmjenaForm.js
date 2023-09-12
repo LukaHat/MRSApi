@@ -39,26 +39,30 @@ export const DeleteRazmjenaForm = () => {
   return (
     <>
       <main>
-        <h1>Unesite ID razmjene koju želite izbrisati</h1>
-        <form onSubmit={(e) => e.preventDefault()}>
-          <div>
-            <label htmlFor="razmjena_id">ID:</label>
-            <input
-              type="number"
-              name="razmjena_id"
-              id="razmjena_id"
-              placeholder="ID razmjene"
-              value={id}
-              onChange={handleInput}
-            />
+        <div className="list">
+          <h1>Unesite ID razmjene koju želite izbrisati</h1>
+          <form onSubmit={(e) => e.preventDefault()}>
+            <div className="input">
+              <label htmlFor="razmjena_id">ID:</label>
+              <input
+                type="number"
+                name="razmjena_id"
+                id="razmjena_id"
+                placeholder="ID razmjene"
+                value={id}
+                onChange={handleInput}
+              />
+            </div>
+          </form>
+          <div className="form-buttons">
             <button type="button" onClick={handleDelete}>
               Izbriši
             </button>
+            <Link to="/razmjene">
+              <button onClick={fetchRazmjene}>Popis Razmjena</button>
+            </Link>
           </div>
-          <Link to="/razmjene">
-            <button onClick={fetchRazmjene}>Popis Razmjena</button>
-          </Link>
-        </form>
+        </div>
       </main>
     </>
   );

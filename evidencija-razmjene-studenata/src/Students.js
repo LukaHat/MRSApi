@@ -22,9 +22,9 @@ export const Students = () => {
   return (
     <>
       <main>
-        <h1>Studenti na razmjeni</h1>
-        <ul className="student-list">
-          <li className="student row-titles">
+        <ul className="list">
+          <h1 className="sub-title">Studenti na razmjeni</h1>
+          <li className="row-titles">
             <span>Id</span>
             <span>Ime</span>
             <span>Prezime</span>
@@ -33,7 +33,7 @@ export const Students = () => {
           {students.map((student) => {
             const { id, ime, prezime, jmbag } = student;
             return (
-              <li key={id} className="student">
+              <li key={id} className="rows">
                 <h3>{id}</h3>
                 <h3>{ime}</h3>
                 <h3>{prezime}</h3>
@@ -41,7 +41,7 @@ export const Students = () => {
               </li>
             );
           })}
-          <li className="edit-create-buttons">
+          <li className="crud-buttons">
             <Link to="/create/student">
               <button>Dodaj</button>
             </Link>

@@ -1,22 +1,39 @@
 @import './mixins'
 @import './variables'
 
-h1
-    margin-top: 2rem
-    margin-bottom: 1rem
-form
+.list
+    h1
+        margin: 2rem auto
+        font-size: 25px
+        font-weight: bold
+    form
+        width: 100%    
+        .input
+            @include displayFlex
+            margin-bottom: 1rem
+            flex-direction: column
+            font-size: 20px
+            label
+                width: 50%
+            input
+                width: 50%
+.form-buttons
+    margin: 2rem auto
     @include displayFlex
-    flex-direction: column
-    font-size: 20px
-    gap: 10px
-    width: 30%
-    div
-        width: 100%
-        gap: 15px
-        @include displayFlex
-        input
-            height: 30px
-            border-radius: 20px solid $green
-
-        
-        
+    gap: 1rem
+    button
+        padding: 1rem
+        font-size: 15px
+        background-color: transparent
+        color: $white
+        border: 2px solid $white
+        box-shadow: 5px 5px 4px 2px rgba(255, 255, 255, 0.4)
+        &:hover
+            cursor: pointer
+            color: $primary-color
+            border: 2px solid $primary-color
+            background-color: $white
+            box-shadow: 5px 5px 4px 2px rgba(0, 0, 0, 0.6)
+            letter-spacing: .1rem
+            scale: 1.1
+            transition: 500ms          

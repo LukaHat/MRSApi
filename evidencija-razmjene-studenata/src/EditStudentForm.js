@@ -49,61 +49,63 @@ export const EditStudentForm = () => {
   return (
     <>
       <main>
-        <h1>Uredite podatke studenta</h1>
-        <form>
-          <div>
-            <label htmlFor="student_id">ID:</label>
-            <input
-              type="text"
-              name="student_id"
-              id="student_id"
-              placeholder="ID Studenta"
-              value={id}
-              onChange={(e) => setId(e.target.value)} // Update id state on input change
-            />
-          </div>
-          <div>
-            <label htmlFor="student_ime">Ime:</label>
-            <input
-              type="text"
-              name="student_ime"
-              id="student_ime"
-              placeholder="Ime Studenta"
-              value={ime}
-              onChange={(e) => setIme(e.target.value)}
-            />
-          </div>
-          <div>
-            <label htmlFor="student_prezime">Prezime:</label>
-            <input
-              type="text"
-              name="student_prezime"
-              id="student_prezime"
-              placeholder="Prezime Studenta"
-              value={prezime}
-              onChange={(e) => setPrezime(e.target.value)}
-            />
-          </div>
-          <div>
-            <label htmlFor="student_jmbag">JMBAG:</label>
-            <input
-              type="text"
-              name="student_jmbag"
-              id="student_jmbag"
-              placeholder="JMBAG Studenta"
-              value={jmbag}
-              onChange={(e) => setJmbag(e.target.value)}
-            />
-          </div>
-          <div>
+        <div className="list">
+          <h1>Uredite podatke studenta</h1>
+          <form>
+            <div className="input">
+              <label htmlFor="student_id">ID:</label>
+              <input
+                type="text"
+                name="student_id"
+                id="student_id"
+                placeholder="ID Studenta"
+                value={id}
+                onChange={(e) => setId(e.target.value)} // Update id state on input change
+              />
+            </div>
+            <div className="input">
+              <label htmlFor="student_ime">Ime:</label>
+              <input
+                type="text"
+                name="student_ime"
+                id="student_ime"
+                placeholder="Ime Studenta"
+                value={ime}
+                onChange={(e) => setIme(e.target.value)}
+              />
+            </div>
+            <div className="input">
+              <label htmlFor="student_prezime">Prezime:</label>
+              <input
+                type="text"
+                name="student_prezime"
+                id="student_prezime"
+                placeholder="Prezime Studenta"
+                value={prezime}
+                onChange={(e) => setPrezime(e.target.value)}
+              />
+            </div>
+            <div className="input">
+              <label htmlFor="student_jmbag">JMBAG:</label>
+              <input
+                type="text"
+                name="student_jmbag"
+                id="student_jmbag"
+                placeholder="JMBAG Studenta"
+                value={jmbag}
+                onChange={(e) => setJmbag(e.target.value)}
+              />
+            </div>
+          </form>
+          <div className="form-buttons">
             <button type="button" onClick={handleEdit}>
               Spremi promjene
             </button>
+            <Link to="/studenti">
+              <button>Popis studenata</button>
+            </Link>
           </div>
-        </form>
-        <Link to="/studenti">
-          <button>Popis studenata</button>
-        </Link>
+        </div>
       </main>
     </>
   );
